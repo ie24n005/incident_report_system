@@ -2,61 +2,118 @@
 body {
   font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
   margin: 40px;
-  background-color: #f8fafc; /* 背景を薄いグレーにして表を際立たせる */
-  color: #334155; /* 文字色を少し柔らかい黒にする */
+  background-color: #f8fafc;
+  color: #334155;
 }
 
-/* 警告エリアの見た目（CSSで調整する場合） */
-.alert {
+/* タイトル */
+h1 {
+  font-size: 28px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+/* ボタン */
+.btn-primary {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* 警告エリア */
+.alert-box {
   background-color: #fef2f2;
+  color: #991b1b;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
   border: 1px solid #fee2e2;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 24px;
+}
+.alert-box ul {
+  margin: 5px 0 0 20px;
+}
+
+/* 並び替えエリア */
+.sort-box {
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.sort-link {
+  text-decoration: none;
+  color: #007bff;
+  margin: 0 5px;
+}
+.sort-link.active {
+  font-weight: bold;
+  color: #1e293b;
 }
 
 /* 表（テーブル）全体の構造 */
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #ffffff; /* テーブル内は白背景 */
-  border-radius: 8px; /* 角を丸くする */
-  overflow: hidden; /* 角丸をはみ出さないようにする */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* 軽い影をつけて立体感を出す */
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: none;
 }
 
 /* セル（マス目）ごとの共通設定 */
 th, td {
-  padding: 14px 16px; /* 上下の余白を広げて見やすく */
-  text-align: left; /* 基本は左寄せ */
-  border-bottom: 1px solid #e2e8f0; /* 縦線を消し、横線のみにして今風にする */
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #f1f5f9;
 }
 
-/* 表の見出しの装飾 */
+/* 表の見出し */
 th {
-  background-color: #f1f5f9; /* 落ち着いた薄いグレー */
-  color: #475569; /* 見出し文字のコントラストを少し下げる */
+  background-color: #f8fafc;
+  color: #64748b;
   font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* 中央寄せ用クラス */
+.text-center {
+  text-align: center;
+}
+
+/* 詳細用クラス */
+.text-detail {
+  line-height: 1.5;
   font-size: 14px;
 }
 
-/* テーブル内の行（tr）に対するホバー効果 */
-tbody tr:hover {
-  background-color: #f8fafc; /* マウスを乗せた行の色を変えて見やすくする */
-}
-
-/* 詳細カラム（長文）の幅調整 */
-td:nth-child(5) {
-  max-width: 300px;
-  line-height: 1.5; /* 行間を広げて読みやすく */
-}
-
-/* 操作（編集・削除）リンクの見た目 */
-table a {
-  text-decoration: none;
-  margin-right: 8px;
+/* 重要度バッジ */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
   font-weight: bold;
+  font-size: 12px;
 }
-table a:hover {
-  text-decoration: underline;
+.badge-danger { background-color: #fef2f2; color: #991b1b; }
+.badge-warning { background-color: #fffbeb; color: #92400e; }
+.badge-success { background-color: #f0fdf4; color: #166534; }
+
+/* 操作リンク */
+.link-edit { color: #007bff; text-decoration: none; margin-right: 10px; font-weight: bold; }
+.link-delete { color: #dc3545; text-decoration: none; font-weight: bold; }
+.link-edit:hover, .link-delete:hover { text-decoration: underline; }
+
+/* 行のホバー効果 */
+tbody tr:hover {
+  background-color: #f8fafc;
 }
