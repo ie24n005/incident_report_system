@@ -6,7 +6,7 @@ body {
   color: #334155; /* 文字色を少し柔らかい黒にする */
 }
 
-/* 警告エリアの見た目（もしCSSで調整する場合） */
+/* 警告エリアの見た目（CSSで調整する場合） */
 .alert {
   background-color: #fef2f2;
   border: 1px solid #fee2e2;
