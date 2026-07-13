@@ -1,29 +1,62 @@
+/* ページ全体の基本設定 */
 body {
-
-font-family: sans-serif;
-
-margin: 40px;
-
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+  margin: 40px;
+  background-color: #f8fafc; /* 背景を薄いグレーにして表を際立たせる */
+  color: #334155; /* 文字色を少し柔らかい黒にする */
 }
 
+/* 警告エリアの見た目（もしCSSで調整する場合） */
+.alert {
+  background-color: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+/* 表（テーブル）全体の構造 */
 table {
-
-width: 100%;
-
-border-collapse: collapse;
-
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; /* テーブル内は白背景 */
+  border-radius: 8px; /* 角を丸くする */
+  overflow: hidden; /* 角丸をはみ出さないようにする */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* 軽い影をつけて立体感を出す */
 }
 
+/* セル（マス目）ごとの共通設定 */
 th, td {
-
-border: 1px solid black;
-
-padding: 10px;
-
+  padding: 14px 16px; /* 上下の余白を広げて見やすく */
+  text-align: left; /* 基本は左寄せ */
+  border-bottom: 1px solid #e2e8f0; /* 縦線を消し、横線のみにして今風にする */
 }
 
+/* 表の見出し（タイトル行）の装飾 */
 th {
+  background-color: #f1f5f9; /* 落ち着いた薄いグレー */
+  color: #475569; /* 見出し文字のコントラストを少し下げる */
+  font-weight: 600;
+  font-size: 14px;
+}
 
-background: #dddddd;
+/* テーブル内の行（tr）に対するホバー効果 */
+tbody tr:hover {
+  background-color: #f8fafc; /* マウスを乗せた行の色を変えて見やすくする */
+}
 
+/* 詳細カラム（長文）の幅調整 */
+td:nth-child(5) {
+  max-width: 300px;
+  line-height: 1.5; /* 行間を広げて読みやすく */
+}
+
+/* 操作（編集・削除）リンクの見た目 */
+table a {
+  text-decoration: none;
+  margin-right: 8px;
+  font-weight: bold;
+}
+table a:hover {
+  text-decoration: underline;
 }
