@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>インシデント管理システム</title>
-    <!-- 正しいパスに修正 -->
-    <link rel="stylesheet" href="/static/style.css">
+    <!-- パスを確実に通すため、Flask推奨の記述に変更 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
@@ -33,7 +33,6 @@
         <a href="/?sort=level_desc" class="sort-link {% if current_sort == 'level_desc' %}active{% endif %}">重要度の高い順</a>
     </div>
 
-    <!-- 古いborder属性やインラインstyleをすべて削除 -->
     <table>
         <thead>
             <tr>
